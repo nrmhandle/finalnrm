@@ -11,6 +11,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Badge from 'react-bootstrap/Badge';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 
 const Carrers = () => {
@@ -43,7 +44,7 @@ export default function Home() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className="nav-link active text-white" aria-current="page">Home</a>
                 </Link>
               </li>
@@ -72,8 +73,35 @@ export default function Home() {
           <button type="submit" className="btn btn-outline-light text-white">Search</button>
         </form>
       </div>
+      <div>
+        {products.map(product => {
+          return (
+            <div key={product.id}>
+              <Card>
+                <Card.Body>
+                  <h3>{product.title}</h3>
+                  <p>{product.description}</p>
+                  <p>${product.price}</p>
+                  <button className="btn btn-light text-left snipcart-add-item"
+                    data-item-id={product.id}
+                    data-item-image={product.image}
+                    data-item-name={product.title}
+                    data-item-price={product.price}
+                  >
+                    Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </button>
+                </Card.Body>
+              </Card>
+
+            </div>
+          );
+        })}
+      </div>
 
       <main className={styles.main}>
+
         <div className={styles.grid}>
           {products.map(product => {
             return (
