@@ -20,13 +20,6 @@ const Carrers = () => {
 }
 
 export default function Home() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // do something with searchTerm, like filter the products array
-  }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -72,8 +65,8 @@ export default function Home() {
 
       <div className="justify-content-center text-center align-items-center align-content-center">
         <h2>All Products</h2>
-        <form onSubmit={handleSearch}>
-          <input className='form-control' type="text" placeholder='Search Products' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+        <form>
+          <input className='form-control' type="text" placeholder='Search Products' />
           <button type="submit" className="btn btn-outline-light text-white">Search</button>
         </form>
       </div>
