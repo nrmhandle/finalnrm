@@ -43,7 +43,9 @@ export default function Home() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active text-white" aria-current="page" href="/">Home</a>
+                <Link href="/">
+                  <a className="nav-link active text-white" aria-current="page">Home</a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="https://custom.newremarkablemasterpieces.art">Custom Orders</a>
@@ -98,13 +100,13 @@ export default function Home() {
       <footer className={styles.footer}>
         <script async src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js" />
         <div hidden id="snipcart" data-api-key="MTAwZWMzNTUtNmM4MC00NjcwLTgyNjctNjRlNmVjYTI3YWIzNjM4MDQ1NjU0NzU3NDIyMDY0" />
-        <a href="/">
+        <a>
           <img height={30} width={30} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" />
         </a>
-        <a href="/">
+        <a>
           <img height={50} width={50} src="https://i.imgur.com/NiDhfLg.png" />
         </a>
-        <a href="/">
+        <a>
           <img height={30} width={30} src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-png-full-colour-glyph.png" />
         </a>
       </footer>
