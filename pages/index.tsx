@@ -94,12 +94,13 @@ export default function Home() {
                   </button>
                 </Card.Body>
               </Card>
+              <br />
 
             </div>
           );
         })}
       </div>
-
+{/*
       <main className={styles.main}>
 
         <div className={styles.grid}>
@@ -124,6 +125,7 @@ export default function Home() {
           })}
         </div>
       </main>
+        */}
 
       <footer className={styles.footer}>
         <script async src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js" />
